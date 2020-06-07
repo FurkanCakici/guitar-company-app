@@ -1,0 +1,74 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css';
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Paytone+One&display=swap');
+
+/* FONTS */
+$font-primary: 'Francois One', sans-serif;
+$font-secondary: 'Paytone One', sans-serif;
+
+/* COLORS */
+$color-primary: #0E141F;
+$color-secondary: #25A954;
+$color-primary-light: lighten($color-primary,5%);
+$color-secondary-light: lighten($color-secondary,8%);
+
+$color-white: #fff5d7;
+$color-white-1: #dcdde1;
+
+$color-selector: #f2f2f2; 
+
+/* BORDER */
+$button-border-radius: 0.5rem;
+
+/*---------------------*/
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+::selection {
+   color: $color-selector;
+   background-color: $color-primary;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+
+   @include responsive(laptop) {
+      font-size: 60.75%;
+   }
+
+   @include responsive(tab-land) {
+      font-size: 56.25%; /* 10/16=56.25% */
+   }
+
+   @include responsive(tab-port) {
+      font-size: 50%;
+   }
+
+   @include responsive(phone) {
+      font-size: 43.75%;
+   }
+   @include responsive(big-desktop) {
+      font-size: 75%; //12
+   }
+}
+
+body {
+   font-family: $font-secondary;
+   font-weight: 400;
+   line-height: 1.6;
+   background-color: $color-primary;
+   min-width: 320px;
+   overflow-x: hidden;
+}
+
+/*
+Ragin Beige: #fff5d7 // 2 BULUT
+
+Sleuthe Yellow: #feb300 // NİCE TRY YELLOW
+*/

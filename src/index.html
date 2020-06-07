@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.min.css">
+    <title>Tordas Guiatar World</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <header class="header" id="home">
+        <img src="./img/guitar-pick-logo.png" alt="logo" class="header__image" data-tilt>
+        <div class="header__label">
+            <span class="header__welcome">Welcome to Tordas Guiatar World!</span>
+            <button class="header__button-enter">Shop now!</button>
+        </div>
+    </header>
+
+    <!-- NAV -->
+
+    <nav class="nav">
+        <div class="nav__btn" onclick="toggle()">
+            <div class="nav__btn-line"></div>
+            <div class="nav__btn-line"></div>
+            <div class="nav__btn-line"></div>
+        </div>
+        <div class="nav__background">
+            <div class="nav__menu">
+                <ul class="nav__menu-list">
+                    <li>
+                        <a href="#home" class="nav__menu-link" onclick="toggle()">Home</a>
+                        <a href="#gallery" class="nav__menu-link" onclick="toggle()">Gallery</a>
+                        <a href="#models" class="nav__menu-link" onclick="toggle()">New Models</a>
+                        <a href="#contact" class="nav__menu-link" onclick="toggle()">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SERVİCE -->
+
+    <section class="service">
+        <div class="service__item service__item--1">
+            <i class="fas fa-globe service__icon"></i>
+            <div class="service__description">
+                <span class="service__header">Global</span>
+                Our company delivers global products!
+            </div>
+        </div>
+        <div class="service__item service__item--2">
+            <i class="fas fa-check-double service__icon"></i>
+            <div class="service__description">
+                <span class="service__header">Best Product</span>
+                You can be 100% sure you get the best product on the market
+            </div>
+        </div>
+        <div class="service__item service__item--3">
+            <i class="fas fa-phone service__icon"></i>
+            <div class="service__description">
+                <span class="service__header">Customer Service</span>
+                Our customer service works 24/7
+            </div>
+        </div>
+        <div class="service__item service__item--4">
+            <i class="fas fa-smile-beam service__icon"></i>
+            <div class="service__description">
+                <span class="service__header">Our Mission</span>
+                Our guitars are made with the idea of giving people the best we cant
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="products" id="gallery">
+        <div class="caption1" style="display: none;">
+            <h4>Caption</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, veritatis voluptatum eveniet ipsum quo
+                laudantium odio modi libero reiciendis impedit consequuntur fuga ab accusantium, debitis repudiandae
+                delectus inventore. Blanditiis, optio.</p>
+        </div>
+        <div class="caption2" style="display: none;">
+            <h4>Caption Caption</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, veritatis voluptatum eveniet ipsum quo
+                laudantium odio modi libero reiciendis impedit consequuntur fuga ab accusantium, debitis repudiandae
+                delectus inventore. Blanditiis, optio.</p>
+        </div>
+        <div class="products__container" id="captions">
+            <a href="./img/guitar-head.jpg" class="products__product products__product--1" data-sub-html=".caption1">
+                <img src="./img/guitar-head.jpg" alt="guitar-head" class="products__image">
+            </a>
+            <a href="./img/red-guitar.jpg" class="products__product products__product--2" data-sub-html=".caption2">
+                <img src="./img/red-guitar.jpg" alt="red-guitar" class="products__image">
+            </a>
+            <a href="./img/bass-guitar.jpg" class="products__product products__product--3" data-sub-html=".caption1">
+                <img src="./img/bass-guitar.jpg" alt="bass-guitar" class="products__image">
+            </a>
+            <a href="./img/guitar-stage.jpg" class="products__product products__product--4" data-sub-html=".caption1">
+                <img src="./img/guitar-stage.jpg" alt="guitar-stage" class="products__image">
+            </a>
+            <a href="./img/acoustic-guitar.jpg" class="products__product products__product--5"
+                data-sub-html=".caption1">
+                <img src="./img/acoustic-guitar.jpg" alt="acoustic-guitar" class="products__image">
+            </a>
+            <a href="./img/metal-guitarist.jpg" class="products__product products__product--6"
+                data-sub-html=".caption1">
+                <img src="./img/metal-guitarist.jpg" alt="metal-guitarist" class="products__image">
+            </a>
+            <a href="./img/les-paul.jpg" class="products__product products__product--7" data-sub-html=".caption1">
+                <img src="./img/les-paul.jpg" alt="les-paul" class="products__image">
+            </a>
+            <a href="./img/tapping.jpg" class="products__product products__product--8" data-sub-html=".caption1">
+                <img src="./img/tapping.jpg" alt="tapping" class="products__image">
+            </a>
+            <a href="./img/classical-guitar.jpg" class="products__product products__product--9"
+                data-sub-html=".caption1">
+                <img src="./img/classical-guitar.jpg" alt="classical-guitar" class="products__image">
+            </a>
+            <a href="./img/electric-guitar.jpg" class="products__product products__product--10"
+                data-sub-html=".caption1">
+                <img src="./img/electric-guitar.jpg" alt="electric-guitar" class="products__image">
+            </a>
+        </div>
+    </section>
+
+    <!-- MODELS -->
+    <section class="card" id="models">
+        <div class="card__item card__item--1">
+            <img src="./img/acoustic-guitar.jpg" class="card__image"></img>
+            <div class="card__description">
+                <span class="card__header">Classic Guitar</span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem?
+            </div>
+        </div>
+        <div class="card__item card__item--2">
+            <img src="./img/les-paul.jpg" class="card__image"></img>
+            <div class="card__description">
+                <span class="card__header">Acoustic Guitar</span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem?
+            </div>
+        </div>
+        <div class="card__item card__item--3">
+            <img src="./img/electric-guitar.jpg" class="card__image"></img>
+            <div class="card__description">
+                <span class="card__header">Electric Guitar</span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem?
+            </div>
+        </div>
+        <div class="card__item card__item--4">
+            <img src="./img/red-guitar.jpg" class="card__image"></img>
+            <div class="card__description">
+                <span class="card__header">Bass Guitar</span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem?
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact__row">
+            <h2>Contact Us</h2>
+            <div class="contact__row">
+                <div class="contact__col">
+                    <div class="contact__inputBox">
+                        <input type="text" required>
+                        <span class="contact__inputBox--text">First Name</span>
+                        <span class="contact__inputBox--line"></span>
+                    </div>
+                </div>
+                <div class="contact__col">
+                    <div class="contact__inputBox">
+                        <input type="text" required>
+                        <span class="contact__inputBox--text">Last Name</span>
+                        <span class="contact__inputBox--line"></span>
+                    </div>
+                </div>
+                <div class="contact__col">
+                    <div class="contact__inputBox">
+                        <input type="email" required>
+                        <span class="contact__inputBox--text">Email</span>
+                        <span class="contact__inputBox--line"></span>
+                    </div>
+                </div>
+                <div class="contact__col">
+                    <div class="contact__inputBox">
+                        <input type="tel" required>
+                        <span class="contact__inputBox--text">Mobile</span>
+                        <span class="contact__inputBox--line"></span>
+                    </div>
+                </div>
+                <div class="contact__col">
+                    <div class="contact__inputBox contact__inputBox--textarea">
+                        <textarea name="text_Area" required></textarea>
+                        <span class="contact__inputBox--text">Message..</span>
+                        <span class="contact__inputBox--line"></span>
+                    </div>
+                </div>
+                <div class="contact__col">
+                    <input type="submit" value="Send">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <span class="footer__item">© Tordas Guiatar World 2020 </span>
+    </footer>
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

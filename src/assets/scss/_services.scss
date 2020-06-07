@@ -1,0 +1,102 @@
+.service {
+   display: flex;
+   justify-content: space-evenly;
+   color: $color-white;
+   width: 100%;
+   font-size: 2rem;
+   padding: 1rem;
+
+   @include responsive(tab-land) {
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2rem;
+      width: 40rem;
+      height: 25rem;
+      border-radius: $button-border-radius;
+      cursor: pointer;
+      overflow: hidden;
+      word-wrap: break-word;
+      @include easeOut;
+
+      @include responsive(laptop) {
+         margin: 2rem;
+         padding: 1rem;
+      }
+
+      @include responsive(tab-land) {
+         margin: 2rem;
+      }
+
+      @include responsive(phone) {
+         flex-basis: 85% !important;
+      }
+
+      &:hover {
+         transform: translateY(0.5rem) scale(1.1);
+      }
+
+      &--1 {
+         background-color: $color-secondary;
+         @include responsive(tab-land) {
+            flex-basis: 45%;
+         }
+         @include responsive(laptop) {
+            flex-basis: 35%;
+         }
+      }
+      &--2 {
+         background-color: $color-secondary-light;
+         @include responsive(tab-land) {
+            flex-basis: 45%;
+         }
+         @include responsive(laptop) {
+            flex-basis: 40%;
+         }
+      }
+      &--3 {
+         background-color: $color-secondary;
+         @include responsive(tab-land) {
+            flex-basis: 45%;
+         }
+         @include responsive(laptop) {
+            flex-basis: 35%;
+         }
+      }
+      &--4 {
+         background-color: $color-secondary-light;
+         @include responsive(tab-land) {
+            flex-basis: 45%;
+         }
+         @include responsive(laptop) {
+            flex-basis: 35%;
+         }
+      }
+   }
+
+   &__icon {
+      font-size: 10rem;
+      margin-right: 3rem;
+   }
+
+   &__description {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      height: 100%;
+      margin-top: 3rem;
+   }
+
+   &__header {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 3rem;
+   }
+  
+}

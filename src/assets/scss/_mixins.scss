@@ -1,0 +1,39 @@
+@mixin easeOut {
+   transition: all 0.4s ease-out;
+}
+@mixin easeOut-1 {
+   transition: all 0.2s ease-out;
+}
+
+@mixin easeOut-($var) {
+   transition: all #{$var}s ease-out;
+}
+
+@mixin button-animated {
+   &:hover {
+      transform: translateY(-0.3rem);
+
+      &::after {
+         transform: scale(1.2, 1.3);
+         opacity: 0;
+      }
+   }
+
+   &:active {
+      transform: translateY(0.1rem);
+   }
+
+   &::after {
+      content: '';
+      display: block;
+      background-color: $color-secondary;
+      border-radius: $button-border-radius;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      @include easeOut;
+   }
+}

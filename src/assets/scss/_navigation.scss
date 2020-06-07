@@ -1,0 +1,127 @@
+.nav {
+   position: fixed;
+   right: 8rem;
+   top: 8rem;
+   z-index: 6;
+   &__btn {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 4.5rem;
+      height: 3.6rem;
+      z-index: 5;
+      cursor: pointer;
+
+      &:hover {
+         .nav__btn-line {
+            background-color: $color-white-1;
+         }
+
+         .nav__btn-line:nth-child(1) {
+            top: -0.1rem;
+         }
+         .nav__btn-line:nth-child(3) {
+            top: 2.9rem;
+         }
+      }
+
+      &.active {
+         .nav__btn-line:nth-child(1) {
+            top: 1.5rem;
+            transform: rotate(135deg);
+         }
+         .nav__btn-line:nth-child(2) {
+            background-color: transparent;
+         }
+
+         .nav__btn-line:nth-child(3) {
+            top: 1.5rem;
+            transform: rotate(-135deg);
+         }
+      }
+
+      &-line:nth-child(1),
+      &-line:nth-child(2),
+      &-line:nth-child(3) {
+         display: block;
+         width: 4.5rem;
+         height: 0.8rem;
+         background-color: $color-white;
+         position: absolute;
+         left: 0;
+         @include easeOut;
+      }
+
+      &-line:nth-child(1) {
+         top: 0;
+      }
+      &-line:nth-child(2) {
+         top: 1.1rem;
+         margin: 0.3rem 0;
+      }
+
+      &-line:nth-child(3) {
+         top: 2.8rem;
+      }
+   }
+
+   &__background {
+      background-color: $color-secondary;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      transform: translateY(-100vh);
+      @include easeOut;
+
+      &.show {
+         transform: translateY(0vh);
+      }
+   }
+
+   &__menu {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.5rem;
+      color: $color-white;
+   }
+
+   &__menu-list {
+      list-style: none;
+      text-align: center;
+      line-height: 7rem;
+    
+   }
+
+   &__menu-link {
+      text-decoration: none;
+      display: block;
+      min-width: 25rem;
+      cursor: pointer;
+      color: $color-white;
+      border-radius: $button-border-radius;
+      transform: translate3d(200px, 0, 0);
+      opacity: 0;
+      @include easeOut-(0.5);
+
+      &:hover {
+         color: $color-primary;
+         background-color: $color-white;
+      }
+
+      &.show{
+         transform: translate3d(0, 0, 0);
+         opacity: 1;
+      }
+
+      @for $x from 1 to 6 {
+         &:nth-child(#{$x}){
+            transition-delay: $x * 0.1s;
+         }
+      }
+      
+   }
+}

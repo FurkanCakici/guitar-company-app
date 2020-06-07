@@ -1,0 +1,73 @@
+.header {
+   height: 68vh;
+   background: linear-gradient(
+         to right bottom,
+         rgba($color-primary, 0.6) 50%,
+         rgba($color-secondary, 0.4) 90%
+      ),
+      url(../img/guitarist.jpg) no-repeat;
+   background-size: cover;
+   border-bottom: 1px solid $color-white;
+
+   overflow: hidden;
+   @include responsive(tab-port) {
+      height: 68rem;
+   }
+
+   &__image {
+      width: 15rem;
+      height: 15rem;
+      margin-top: 3rem;
+      margin-left: 3rem;
+      cursor: pointer;
+   }
+
+   &__label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      @include responsive(tab-land) {
+         margin: 4rem auto;
+      }
+   }
+
+   &__welcome {
+      color: $color-white;
+      font-size: 7rem;
+      margin-bottom: 10rem;
+
+      @include responsive(phone) {
+         font-size: 5rem;
+      }
+
+      @include responsive(tab-land) {
+         margin-bottom: 5rem;
+      }
+
+      @include responsive(tab-port) {
+         font-size: 5.5rem;
+         margin-bottom: 7rem;
+      }
+   }
+
+   &__button-enter {
+      font-family: $font-primary;
+      border-radius: $button-border-radius;
+      background-color: $color-secondary;
+      color: $color-white;
+      position: relative;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      width: 25rem;
+      height: 10rem;
+      padding: 1rem 2rem;
+      font-size: 2.5rem;
+      @include easeOut;
+
+      @include button-animated;
+   }
+}
